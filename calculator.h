@@ -17,14 +17,26 @@ public:
 
 private slots:
     void NumPressed();
-    void OpperatorPressed();
+    void OperatorPressed();
+    void EqualsPressed();
+
+    void SwapSign();
+
+    void AddToMemory();
+    void CopyFromMemory();
+
+    void ClearMemory();
+    void ClearAll();
 
 private:
     Ui::Calculator *ui;
+    QString strOperator = "";
 
-    double sumSoFar;
-    double rightOperand;
-    QString strOpperator;
+    double sumSoFar = 0;
+    double rightOperand = 0;
+    double memory = 0;
+
+    bool digitPressed = false;
 
 };
 #endif // CALCULATOR_H
